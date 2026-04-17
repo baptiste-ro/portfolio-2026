@@ -21,10 +21,7 @@ export default function TranslateButton() {
 
 	return (
 		<div className="nav-link translate-container" onClick={visibilityToggle}>
-			<div
-				ref={translateButton}
-				className="translate-icons translate-icons--active"
-			>
+			<div ref={translateButton} className="translate-icons">
 				<div className="translate-icon">
 					<span className="_80pc top-n15">ENG</span>{' '}
 					<span className="_20pc material-icons">translate</span>
