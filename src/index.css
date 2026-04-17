@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -16,6 +20,12 @@
   --mono: ui-monospace, Consolas, monospace;
 
   font: 8px/145% var(--sans);
+  
+  --font-sans: ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
@@ -56,6 +66,7 @@
   text-align: center;
   min-height: 100svh;
   display: flex;
+  align-items: center;
   flex-direction: column;
   box-sizing: border-box;
 }

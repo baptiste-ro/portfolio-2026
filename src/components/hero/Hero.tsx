@@ -3,7 +3,7 @@ import BubbleBackground from '../bubbles/background/BubbleBackground';
 
 export default function Hero() {
 	return (
-		<div style={{ backgroundColor: '#1a1a1a' }}>
+		<div>
 			<div className="hero" id="hero">
 				<div className="canvas">
 					<canvas
@@ -15,7 +15,7 @@ export default function Hero() {
 				</div>
 				<div className="heading">
 					<div className="heading__line-1">
-						<span>Welcome !</span>
+						<span className="test">Welcome !</span>
 					</div>
 					<div className="heading__line-1">
 						I'm <span>Baptiste</span>.

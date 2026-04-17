@@ -1,17 +1,15 @@
 import './App.css';
-import Hero from './components/hero/Hero';
-import BubbleBackground from './components/bubbles/background/BubbleBackground';
-import NavBar from './components/navbar/NavBar';
-import About from './components/about/About';
-import { lightDashesBackground } from './assets/ClassNames';
+import Header from './components/header/header';
+import { BrowserRouter } from 'react-router';
+import Navigator from './components/navigator/Navigator';
 
 function App() {
 	return (
 		<>
-			<Hero />
-			<NavBar />
-			<BubbleBackground bgType={lightDashesBackground} nb={1000} />
-			<About />
+			<BrowserRouter>
+				<Header />
+				<Navigator />
+			</BrowserRouter>
 		</>
 	);
 }

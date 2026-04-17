@@ -11,6 +11,10 @@ a {
     z-index: 9999;
 }
 
+.test {
+    font-family: var(--font-sans);
+}
+
 .canvas {
     position: absolute;
     top: 0;
