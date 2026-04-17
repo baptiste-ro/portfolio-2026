@@ -1,0 +1,18 @@
+AddType application/javascript .js
+AddType text/css .css
+AddType application/json .json
+
+<IfModule mod_mime.c>
+  AddType application/javascript .mjs
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set Content-Type "application/javascript" env=js
+</IfModule>
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
