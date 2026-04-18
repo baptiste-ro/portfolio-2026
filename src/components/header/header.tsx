@@ -1,19 +1,22 @@
 import { Link } from 'react-router';
 import TranslateButton from '../translate-button/TranslateButton';
-import { useEffect, useRef } from 'react';
 
 export default function Header() {
-	const header = useRef<HTMLHeadElement>(null);
+	const scrollToSection = (
+		e: React.MouseEvent<HTMLAnchorElement>,
+		sectionId: string
+	) => {
+		e.preventDefault();
+		const element = document.getElementById(sectionId);
+		if (element) {
+			element.scrollIntoView({ behavior: 'smooth' });
+		}
+	};
 
-	useEffect(() => {
-		window.addEventListener('scroll', () => {
-			if (header.current != null && window.scrollY > 200) {
-				header.current.classList.add('dynamic-header-small');
-			} else {
-				header.current!.classList.remove('dynamic-header-small');
-			}
-		});
-	}, []);
+	const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		e.preventDefault();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
 
 	return (
 		<header
@@ -22,7 +25,6 @@ export default function Header() {
 				transition: 'width 0.5s ease, max-width 0.5s ease',
 				justifySelf: 'center',
 			}}
-			ref={header}
 		>
 			{' '}
 			<div
@@ -47,15 +49,34 @@ export default function Header() {
 						className="flex lg:items-center lg:flex-row items-center gap-4 px-1 lg:px-0 lg:py-0 lg:w-auto flex"
 					>
 						{' '}
-						<Link to="/" className="nav-link-active home-link">
+						<a
+							href="#"
+							onClick={handleHomeClick}
+							className="nav-link-active home-link"
+						>
 							Home
-						</Link>{' '}
-						<Link to="/projects" className="nav-link home-link">
+						</a>{' '}
+						<a
+							href="#about"
+							onClick={e => scrollToSection(e, 'about')}
+							className="nav-link home-link"
+						>
+							About
+						</a>{' '}
+						<a
+							href="#projects"
+							onClick={e => scrollToSection(e, 'projects')}
+							className="nav-link home-link"
+						>
 							Projects
-						</Link>{' '}
-						<Link to="/contact" className="nav-link home-link">
+						</a>{' '}
+						<a
+							href="#contact"
+							onClick={e => scrollToSection(e, 'contact')}
+							className="nav-link home-link"
+						>
 							Contact
-						</Link>{' '}
+						</a>{' '}
 						<TranslateButton />
 					</div>{' '}
 				</nav>{' '}

@@ -6,6 +6,7 @@ export default function Navigator() {
 	return (
 		<Routes>
 			<Route path="/" element={<Portfolio />} />
+			{/* <Route path="/about" element={<Portfolio />} /> */}
 			<Route path="/project" element={<Project />} />
 			<Route path="/projects" element={<Portfolio />} />
 			<Route path="/contact" element={<Portfolio />} />

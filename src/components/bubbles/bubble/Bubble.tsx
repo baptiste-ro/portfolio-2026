@@ -89,7 +89,7 @@ export default function Bubble(
 			this.vx = (-0.5 + Math.random()) / (Math.random() > 0.5 ? 4 : 5);
 			this.vy = (-0.5 + Math.random()) / (Math.random() > 0.5 ? 4 : 5);
 
-			this.radius = Math.random() * 1;
+			this.radius = Math.random() * 0.75;
 
 			const clr = colour[Math.floor(Math.random() * colour.length)];
 

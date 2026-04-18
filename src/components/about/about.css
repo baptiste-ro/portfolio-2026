@@ -1,15 +1,3 @@
-@media (min-width: 48rem) {
-	.md\:px-12 {
-		padding-inline: calc(var(--spacing) * 12);
-	}
-}
-
-@media (min-width: 48rem) {
-	.md\:grid-cols-12 {
-		grid-template-columns: repeat(12, minmax(0, 1fr));
-	}
-}
-
 .py-32 {
 	padding-block: calc(var(--spacing) * 32);
 }
@@ -18,36 +6,8 @@
 	padding-inline: calc(var(--spacing) * 6);
 }
 
-.gap-x-6 {
-	column-gap: calc(0.25rem * 6);
-}
-
-.grid-cols-1 {
-	grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid {
-	display: grid;
-}
-
 .z-10 {
 	z-index: 10;
-}
-
-.relative {
-	position: relative;
-}
-
-@media (min-width: 48rem) {
-	.md\:mb-0 {
-		margin-bottom: calc(var(--spacing) * 0);
-	}
-}
-
-@media (min-width: 48rem) {
-	.md\:col-span-2 {
-		grid-column: span 2 / span 2;
-	}
 }
 
 .uppercase {
@@ -74,10 +34,6 @@
 
 .mb-8 {
 	margin-bottom: calc(var(--spacing) * 8);
-}
-
-.col-span-1 {
-	grid-column: span 1 / span 1;
 }
 
 .text-neutral-800 {
@@ -175,4 +131,32 @@
 
 .min-h-\[60vh\] {
     min-height: 60vh;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-start {
+    align-items: flex-start;
+}
+.px-m {
+    padding-inline: 18%;
+}
+
+.py-m {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.text-large {
+    font-size: large;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.white-text {
+    color: var(--color-white-theme);
 }
