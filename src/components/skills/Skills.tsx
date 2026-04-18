@@ -7,7 +7,7 @@ import SkillListElement from './skill/SkillListElement';
 
 export default function Skills() {
 	return (
-		<section id="skills" className="pb-sm px-sm w-full">
+		<section className="pb-sm px-sm w-full">
 			<div className="skill-grid-parent">
 				<div className="skill-grid-language">
 					<Languages />

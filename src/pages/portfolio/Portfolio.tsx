@@ -7,10 +7,11 @@ export default function Portfolio() {
 	return (
 		<>
 			<Hero />
-			<Delimiter anchor="About me" />
+			<Delimiter anchor="about" text="About me" />
 			<About />
-			<Delimiter anchor="Skills" />
+			<Delimiter anchor="skills" text="Skills" />
 			<Skills />
+			<Delimiter anchor="projects" text="Projects" />
 		</>
 	);
 }
