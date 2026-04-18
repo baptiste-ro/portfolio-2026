@@ -64,6 +64,13 @@ export default function Header() {
 							About
 						</a>{' '}
 						<a
+							href="#skills"
+							onClick={e => scrollToSection(e, 'skills')}
+							className="nav-link home-link"
+						>
+							Skills
+						</a>{' '}
+						<a
 							href="#projects"
 							onClick={e => scrollToSection(e, 'projects')}
 							className="nav-link home-link"

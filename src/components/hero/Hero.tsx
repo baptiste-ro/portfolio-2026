@@ -19,11 +19,12 @@ export default function Hero() {
 							className="text-[15vw] md:text-[12vw] font-black tracking-tighter leading-none text-center"
 							style={
 								{
-									'-webkit-text-stroke': '2px rgba(255,255,255,0.6)',
-									'-webkit-text-fill-color': 'transparent',
+									WebkitTextStroke: '2px rgba(255,255,255,0.6)',
+									WebkitTextFillColor: 'transparent',
 									left: '-1%',
 									position: 'relative',
 									marginBottom: '0',
+									letterSpacing: '0.25px',
 								} as any
 							}
 						>
@@ -31,7 +32,7 @@ export default function Hero() {
 						</h1>
 					</div>
 					<div className="border-2 w-full border-default-theme br-2"></div>
-					<div className="heading__line-1">SENIOR FRONT-END ENGINEER</div>
+					<div className="heading__line-1">COMPUTER SCIENCE STUDENT</div>
 				</div>
 			</div>
 			<BubbleBackground bgType={bubbleBackground} nb={400} />

@@ -1,0 +1,52 @@
+{
+    "languages": [
+        "c",
+        "python",
+        "Java",
+        "Javascript",
+        "Typescript",
+        "Ruby"
+    ],
+    "databases": [
+        "Postgresql",
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "Cassandra"
+    ],
+    "frontend": [
+        "React",
+        "Vue",
+        "Angular",
+        "HTML5",
+        "CSS3",
+        "TailwindCSS",
+        "Bootstrap",
+        "Redux",
+        "JSP"
+    ],
+    "backend": [
+        "NodeJS",
+        "Express",
+        "Rest API",
+        "Authentication & Authorization",
+        "Spring Boot"
+    ],
+    "tools": [
+        "Git",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "Azure",
+        "Jenkins",
+        "Drupal",
+        "VSCode",
+        "Postman",
+        "Figma",
+        "Bruno",
+        "Word",
+        "Excel",
+        "Canva",
+        "Windsurf"
+    ]
+}

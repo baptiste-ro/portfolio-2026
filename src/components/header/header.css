@@ -32,7 +32,7 @@
 }
 
 .home-link:hover {
-    color: #ff4d5a;
+    color: rgb(146, 7, 253);
     transition: color 0.3s;
 }
 
@@ -63,7 +63,8 @@
 }
 
 .translate-icons--active>*:hover {
-    color: #ff4d5a;
+    color: rgb(36, 3, 62);
+    transition: color 0.3s;
 }
 
 .translate-icons {

@@ -1,0 +1,88 @@
+.skill-grid-parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    column-gap: 5%;
+}
+
+.skill-grid-parent > div {
+    background-color: rgba(0, 0, 0, 0.5); /* rgba(93, 6, 159, 0.4); */
+    border-radius: 8px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding-inline: 5%;
+    gap: 1rem;
+    font-weight: 500;
+    height: fit-content;
+}
+
+.skill-list-elt {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.text-17 {
+    font-size: 24px;
+}
+
+.skill-element {
+    border-radius: 1rem;
+    padding: 8px 16px;
+    user-select: none;
+    transition: transform 0.2s ease;
+}
+
+.skill-element:hover {
+    transform: scale(1.05);
+}
+
+.skill-grid-language { grid-area: 1 / 1 / 2 / 2; }
+.skill-grid-db { grid-area: 1 / 2 / 2 / 3; }
+.skill-grid-front { grid-area: 2 / 1 / 3 / 2; }
+.skill-grid-back { grid-area: 2 / 2 / 3 / 3; }
+.skill-grid-tools { grid-area: 3 / 1 / 4 / 2; }
+
+.pb-sm {
+    padding-bottom: 5%;
+}
+
+.px-sm {
+    padding-inline: 5%;
+}
+
+.color-yellow {
+    color: #eab308;
+}
+
+.color-purple {
+    color: #a855f7;
+}
+
+.color-blue {
+    color: #3b82f6;
+}
+
+.color-green {
+    color: #22c55e;
+}
+
+.color-azure {
+    color: #14b8a6;
+}
+
+.h-10 {
+    height: 40px;
+}
+
+.w-10 {
+    width: 40px;
+}
+
+.icon-gap {
+    gap: 1rem;
+}
