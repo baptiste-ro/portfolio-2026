@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import TranslateButton from '../../translate-button/TranslateButton';
+// import TranslateButton from '../../translate-button/TranslateButton';
 
 export default function Header() {
 	const scrollToSection = (
@@ -84,7 +84,7 @@ export default function Header() {
 						>
 							Contact
 						</a>{' '}
-						<TranslateButton />
+						{/* <TranslateButton /> */}
 					</div>{' '}
 				</nav>{' '}
 			</div>{' '}
