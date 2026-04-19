@@ -1,17 +1,25 @@
-import { Link } from "react-router";
-import type { Project } from "../../../../types/types";
+import { Link } from 'react-router';
+import type { Project } from '../../../../types/types';
 
 export default function SingleProject({
 	image,
 	title,
 	description,
 	link,
-	github,
 }: Project) {
-	console.log(image, title, description, link, github);
 
 	return (
-		<div className="w-32 bg-black-semi rounded-lg flex flex-col">
+		<div
+			className="w-32 bg-black-semi rounded-lg flex flex-col"
+			onMouseEnter={e => {
+				e.currentTarget.style.transform = 'scale(1.05)';
+				e.currentTarget.style.transition = 'transform 0.2s';
+			}}
+			onMouseLeave={e => {
+				e.currentTarget.style.transform = 'none';
+				e.currentTarget.style.transition = 'transform 0.2s';
+			}}
+		>
 			<img
 				src={image}
 				alt="No image for display"
@@ -21,7 +29,9 @@ export default function SingleProject({
 				<p className="text-lg font-bold font-3 text-justify white-text">
 					{title}
 				</p>
-				<p className="font-1/75 line-1/25 text-justify description-text">{description}</p>
+				<p className="font-1/75 line-1/25 text-justify description-text">
+					{description}
+				</p>
 				<Link
 					to={link}
 					target="_blank"

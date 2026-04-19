@@ -12,7 +12,11 @@ export default function Projects() {
 
 	return (
 		<section className="pb-sm px-sm w-full">
-			<h2>Projects</h2>
+			<div className="title">
+				<p className="leading-relaxed white-text pb-sm skill-title">
+					Here are some of my recent projects
+				</p>
+			</div>
 			<div className="flex flex-wrap gap-smx row-gap-md">
 				{projects.map(project => (
 					<SingleProject key={project.title} {...project} />

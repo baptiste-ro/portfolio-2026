@@ -1,0 +1,109 @@
+.font-lg {
+    font-size: 2.5rem;
+}
+
+.font-md {
+    font-size: 1.5rem;
+}
+
+.weight-xxl {
+    font-weight: 800;
+}
+
+.weight-xl {
+    font-weight: 700;
+}
+
+.weight-lg {
+    font-weight: 600;
+}
+
+.weight-md {
+    font-weight: 500;
+}
+
+.weight-sm {
+    font-weight: 400;
+}
+
+.weight-xs {
+    font-weight: 300;
+}
+
+.pt-sm-rem {
+    padding-top: 1.5rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.pb-rem-2 {
+    padding-bottom: 2rem;
+}
+
+.pb-xs {
+    padding-bottom: 1rem;
+}
+
+.pb-rem-sm {
+    padding-bottom: 2rem;
+}
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.p-inline-sm {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.bg-dark-10 {
+    background-color: rgba(23, 23, 23, 1);
+}
+
+.contact-hover:hover {
+    background-color: rgba(51, 65, 85, 0.4);
+}
+
+.contact-input {
+    border: solid 1px var(--text);
+    border-radius: 4px;
+    background: transparent;
+    padding: 0.5rem;
+    text-size-adjust: auto;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.radius-right-none {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.radius-left-none {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.gap-xs {
+    gap: 0.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color:rgb(121, 10, 206)
+}

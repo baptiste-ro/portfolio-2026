@@ -3,6 +3,7 @@ import Delimiter from '../../components/delimiter/Delimiter';
 import Hero from '../../components/sections/hero/Hero';
 import Skills from '../../components/sections/skills/Skills';
 import Projects from '../../components/sections/projects/Projects';
+import Contact from '../../components/sections/contact/Contact';
 
 export default function Portfolio() {
 	return (
@@ -14,6 +15,8 @@ export default function Portfolio() {
 			<Skills />
 			<Delimiter anchor="projects" text="Projects" />
 			<Projects />
+			<Delimiter anchor="contact" text="Contact" />
+			<Contact />
 		</>
 	);
 }

@@ -29,7 +29,7 @@
             "github": "https://gitlab.univ-lille.fr/tom.lelievre.etu/risc-v"
         },
         "Sae_Web": {
-            "title": "Appointment_Application",
+            "title": "Appointment Application",
             "description": "A generic web application made to allow appointment management. It's goal is to be easily customizable for different use cases. Built with JavaScript, JSP, HTML and CSS for the frontend. The backend was built with Java and Spring Boot.",
             "link": "https://github.com/baptiste-ro/SAE_Mathieu",
             "image": "https://res.cloudinary.com/dectmyhph/image/upload/v1776615464/image_euejrv.png",
