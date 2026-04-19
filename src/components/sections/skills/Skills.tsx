@@ -8,6 +8,11 @@ import SkillListElement from './skill/SkillListElement';
 export default function Skills() {
 	return (
 		<section className="pb-sm px-sm w-full">
+			<div className="title">
+				<p className="leading-relaxed white-text pb-sm skill-title">
+					What can I do for you ?
+				</p>
+			</div>
 			<div className="skill-grid-parent">
 				<div className="skill-grid-language">
 					<Languages />

@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './components/header/header';
+import Header from './components/sections/header/header';
 import { BrowserRouter } from 'react-router';
 import Navigator from './components/navigator/Navigator';
 

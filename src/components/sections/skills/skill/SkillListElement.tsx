@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import skillsData from '../../../assets/skills.json';
+import skillsData from '../../../../assets/data/skills.json';
 import SkillElement from './SkillElement';
 
 export default function SkillListElement({ category }: { category: string }) {

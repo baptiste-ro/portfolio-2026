@@ -1,7 +1,8 @@
-import About from '../../components/about/About';
+import About from '../../components/sections/about/About';
 import Delimiter from '../../components/delimiter/Delimiter';
-import Hero from '../../components/hero/Hero';
-import Skills from '../../components/skills/Skills';
+import Hero from '../../components/sections/hero/Hero';
+import Skills from '../../components/sections/skills/Skills';
+import Projects from '../../components/sections/projects/Projects';
 
 export default function Portfolio() {
 	return (
@@ -12,6 +13,7 @@ export default function Portfolio() {
 			<Delimiter anchor="skills" text="Skills" />
 			<Skills />
 			<Delimiter anchor="projects" text="Projects" />
+			<Projects />
 		</>
 	);
 }

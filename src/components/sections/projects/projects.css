@@ -1,0 +1,116 @@
+.gap-sm {
+    gap: 2rem;
+}
+
+.gap-xsm {
+    gap: 1rem;
+}       
+
+.gap-smx {
+    gap: 2%;
+}
+
+.row-gap-sm {
+    row-gap: 1rem;
+}
+
+.row-gap-md {
+    row-gap: 2rem;
+}
+
+.img-height {
+    height: 24rem;
+}
+
+.description-height {
+    height: 21rem;
+}
+
+.faint-gray-border {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bg-black-semi {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.font-3 {
+    font-size: 3rem;
+}
+
+.font-2 {
+    font-size: 2rem;
+}
+
+.font-1\/75 {
+    font-size: 1.75rem;
+}
+
+.font-1\/5 {
+    font-size: 1.5rem;
+}
+
+.font-1 {
+    font-size: 1rem;
+}
+
+.line-1\/25 {
+    line-height: 1.25;
+}
+
+.p-5x {
+    padding: 5%;
+}
+
+.p-2x {
+    padding: 2%;
+}
+
+.p-1x {
+    padding: 1%;
+}
+
+.p-5r {
+    padding: 5rem;
+}
+
+.p-2r {
+    padding: 2rem;
+}
+
+.p-1r {
+    padding: 1rem;
+}
+
+.w-half {
+    width: 50%;
+}
+
+.h-half {
+    height: 50%;
+}
+
+.rounded-lg {
+    border-radius: 8px;
+}
+
+.rounded-md {
+    border-radius: 4px;
+}
+
+.rounded-top-lg {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.w-32 {
+    width: 32%;
+}
+
+.description-text {
+   overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 3; /* number of lines to show */
+           line-clamp: 3; 
+   -webkit-box-orient: vertical;
+}

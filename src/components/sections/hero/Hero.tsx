@@ -1,5 +1,5 @@
-import { bubbleBackground } from '../../assets/ClassNames';
-import BubbleBackground from '../bubbles/background/BubbleBackground';
+import { bubbleBackground } from '../../../assets/ClassNames';
+import BubbleBackground from '../../bubbles/background/BubbleBackground';
 
 export default function Hero() {
 	return (

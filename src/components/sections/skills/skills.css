@@ -21,6 +21,19 @@
     height: fit-content;
 }
 
+.title {
+    text-align: center;
+    position: relative;
+    left: 25%;
+    width: 50%;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.skill-title {
+    font-family: "Playfair Display", serif;
+}
+
 .skill-list-elt {
     font-size: 16px;
     font-weight: 600;
