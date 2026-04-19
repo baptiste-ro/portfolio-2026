@@ -2,7 +2,7 @@ export default function Languages() {
 	return (
 		<div className="flex items-center icon-gap text-17">
 			<div
-				className="w-10 h-10 p-2 rounded-lg color-yellow flex items-center justify-center"
+				className="w-10 h-10 rounded-lg color-yellow flex items-center justify-center"
 				style={{
 					willChange: 'transform, opacity',
 					backfaceVisibility: 'hidden',
