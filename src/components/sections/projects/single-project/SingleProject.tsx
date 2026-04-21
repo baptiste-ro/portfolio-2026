@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router';
 import type { Project } from '../../../../types/types';
 import { useEffect, useState } from 'react';
-import { viewProject, type ViewProjectType } from '../../../../types/languages/skills';
+import { viewProject, type ViewProjectType } from '../../../../types/languages/projects';
 
 export default function SingleProject({
 	image,

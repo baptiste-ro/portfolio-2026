@@ -1,10 +1,104 @@
 {
     "title": "Que puis-je faire pour vous ?",
-    "categories": {
-        "languages": "Langages",
-        "databases": "Bases de données",
-        "frontend": "Frontend",
-        "backend": "Backend",
-        "tools": "Outils & Technologies"
-    }
+    "categories": [
+        {
+            "title": "Langages",
+            "color": "#eab308",
+            "background": "#eab3081a",
+            "icon": [
+                "<path d=\"m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16\"></path>",
+                "<path d=\"M22 9v7\"></path>",
+                "<path d=\"M3.304 13h6.392\"></path>",
+                "<circle cx=\"18.5\" cy=\"12.5\" r=\"3.5\"></circle>"
+            ],
+            "skills": [
+                "c",
+                "python",
+                "Java",
+                "Javascript",
+                "Typescript",
+                "Ruby"
+            ]
+        },
+        {
+            "title": "Base de données",
+            "color": "#a855f7",
+            "background": "#a855f71a",
+            "icon": [
+                "<ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"></ellipse>",
+                "<path d=\"M3 5V19A9 3 0 0 0 21 19V5\"></path>",
+                "<path d=\"M3 12A9 3 0 0 0 21 12\"></path>"
+            ],
+            "skills": [
+                "Postgresql",
+                "MySQL",
+                "MongoDB",
+                "Redis",
+                "Cassandra"
+            ]
+        },
+        {
+            "title": "Frontend",
+            "color": "#3b82f6",
+            "background": "#3b82f61a",
+            "icon": [
+                "<path d=\"m16 18 6-6-6-6\"></path>",
+                "<path d=\"m8 6-6 6 6 6\"></path>"
+            ],
+            "skills": [
+                "React",
+                "Vue",
+                "Angular",
+                "HTML5",
+                "CSS3",
+                "TailwindCSS",
+                "Bootstrap",
+                "Redux",
+                "JSP"
+            ]
+        },
+        {
+            "title": "Backend",
+            "color": "#22c55e",
+            "background": "#22c55e1a",
+            "icon": [
+                "<rect width=\"20\" height=\"8\" x=\"2\" y=\"2\" rx=\"2\" ry=\"2\"></rect>",
+                "<rect width=\"20\" height=\"8\" x=\"2\" y=\"14\" rx=\"2\" ry=\"2\"></rect>",
+                "<line x1=\"6\" x2=\"6.01\" y1=\"6\" y2=\"6\"></line>",
+                "<line x1=\"6\" x2=\"6.01\" y1=\"18\" y2=\"18\"></line>"
+            ],
+            "skills": [
+                "NodeJS",
+                "Express",
+                "Rest API",
+                "Authentication & Authorization",
+                "Spring Boot"
+            ]
+        },
+        {
+            "title": "Outils & Technologies",
+            "color": "#14b8a6",
+            "background": "#14b8a61a",
+            "icon": [
+                "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z\"></path>"
+            ],
+            "skills": [
+                "Git",
+                "Docker",
+                "Kubernetes",
+                "AWS",
+                "Azure",
+                "Jenkins",
+                "Drupal",
+                "VSCode",
+                "Postman",
+                "Figma",
+                "Bruno",
+                "Word",
+                "Excel",
+                "Canva",
+                "Windsurf"
+            ]
+        }
+    ]
 }

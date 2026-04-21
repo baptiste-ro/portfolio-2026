@@ -1,8 +1,4 @@
 import { useEffect, useState } from 'react';
-import Determination from './paragraphs/Determination';
-import PassionOrigin from './paragraphs/PassionOrigin';
-import SelfPresentation from './paragraphs/SelfPresentation';
-import Workingbehavior from './paragraphs/WorkingBehavior';
 import { texts, type AboutType } from '../../../types/languages/about';
 import { useParams } from 'react-router';
 
@@ -23,10 +19,11 @@ export default function About() {
 						HELLO
 						<span className="text-[var(--color-secondary-theme)]">THERE !</span>
 					</h3>
-					<SelfPresentation text={paragraphs?.selfPresentation || ''} />
-					<Workingbehavior text={paragraphs?.workingBehavior || ''} />
-					<PassionOrigin text={paragraphs?.passionOrigin || ''} />
-					<Determination text={paragraphs?.determination || ''} />
+					{paragraphs?.paragraphs.map((paragraph, index) => (
+						<p key={index} className="text-left text-large white-text pb-1">
+							{paragraph}
+						</p>
+					))}
 				</div>
 			</div>
 		</section>

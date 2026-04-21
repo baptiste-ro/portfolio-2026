@@ -1,39 +1,26 @@
-import Backend from './icons/Backend';
-import Database from './icons/Database';
-import Frontend from './icons/Frontend';
-import Languages from './icons/Languages';
-import Tools from './icons/Tools';
+import { useEffect, useState } from 'react';
 import SkillListElement from './skill/SkillListElement';
+import { skills, type SkillsType } from '../../../types/languages/skills';
+import { useParams } from 'react-router';
 
 export default function Skills() {
+	const [skillList, setSkillList] = useState<SkillsType>(skills.en);
+
+	const { lang } = useParams();
+
+	useEffect(() => {
+		setSkillList(skills[lang as keyof typeof skills] || skills.en);
+	}, [lang]);
+
 	return (
 		<section className="pb-sm px-sm w-full">
 			<div className="title">
 				<p className="leading-relaxed white-text pb-sm skill-title">
-					What can I do for you ?
+					{skillList.title}
 				</p>
 			</div>
-			<div className="skill-grid-parent">
-				<div className="skill-grid-language">
-					<Languages />
-					<SkillListElement category="languages" />
-				</div>
-				<div className="skill-grid-db">
-					<Database />
-					<SkillListElement category="databases" />
-				</div>
-				<div className="skill-grid-front">
-					<Frontend />
-					<SkillListElement category="frontend" />
-				</div>
-				<div className="skill-grid-back">
-					<Backend />
-					<SkillListElement category="backend" />
-				</div>
-				<div className="skill-grid-tools">
-					<Tools />
-					<SkillListElement category="tools" />
-				</div>
+			<div className="flex flex-row flex-wrap gap-2p row-gap-lg">
+				<SkillListElement categories={skillList.categories} />
 			</div>
 		</section>
 	);

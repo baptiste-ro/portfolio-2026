@@ -7,8 +7,5 @@ export const texts = {
 };
 
 export type AboutType = {
-	selfPresentation: string;
-	workingBehavior: string;
-	passionOrigin: string;
-	determination: string;
+	paragraphs: string[];
 };
