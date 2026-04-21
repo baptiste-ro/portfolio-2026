@@ -1,0 +1,12 @@
+{
+    "current": {
+        "text": "FRA",
+        "code": "fr"
+    },
+    "others": [
+        {
+            "text": "ENG",
+            "code": "en"
+        }
+    ]
+}

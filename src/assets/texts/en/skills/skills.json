@@ -1,0 +1,10 @@
+{
+    "title": "What can I do for you?",
+    "categories": {
+        "languages": "Languages",
+        "databases": "Databases",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "tools": "Tools & Technologies"
+    }
+}

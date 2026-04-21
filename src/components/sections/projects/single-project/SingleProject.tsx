@@ -1,5 +1,7 @@
-import { Link } from 'react-router';
+import { Link, useParams } from 'react-router';
 import type { Project } from '../../../../types/types';
+import { useEffect, useState } from 'react';
+import { viewProject, type ViewProjectType } from '../../../../types/languages/skills';
 
 export default function SingleProject({
 	image,
@@ -7,6 +9,14 @@ export default function SingleProject({
 	description,
 	link,
 }: Project) {
+
+	const [viewLink, setViewLink] = useState<ViewProjectType>(viewProject.en);
+
+	const { lang } = useParams() as { lang: string };
+
+	useEffect(() => {
+		setViewLink(viewProject[lang as keyof typeof viewProject] || viewProject.en);
+	}, [lang]);
 
 	return (
 		<div
@@ -37,7 +47,7 @@ export default function SingleProject({
 					target="_blank"
 					className="faint-gray-border font-1/75 p-1r gap-xsm flex justify-center rounded-md"
 				>
-					View Project
+					{viewLink.text}
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="14"

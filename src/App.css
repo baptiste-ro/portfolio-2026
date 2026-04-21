@@ -188,3 +188,18 @@ nav:focus-visible,
 nav:active {
     outline: none;
 }
+
+#mobile-menu>a{
+    flex-shrink: 0;
+    width: fit-content;
+}
+
+.dark-purple {
+    color: rgb(36, 3, 62);
+    transition: color 0.3s;
+}
+
+.dark-purple-hover:hover {
+    color: rgb(36, 3, 62);
+    transition: color 0.3s;
+}

@@ -62,11 +62,6 @@
     user-select: none;
 }
 
-.translate-icons--active>*:hover {
-    color: rgb(36, 3, 62);
-    transition: color 0.3s;
-}
-
 .translate-icons {
     display: flex;
     overflow: hidden;
