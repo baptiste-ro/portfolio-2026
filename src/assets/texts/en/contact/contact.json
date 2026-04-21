@@ -1,0 +1,26 @@
+{
+    "title": "How to contact me?",
+    "socials": {
+        "title": "My socials"
+    },
+    "form": {
+        "title": "Contact me",
+        "name": {
+            "label": "Name *",
+            "placeholder": "How should I call you ?"
+        },
+        "email": {
+            "label": "Email *",
+            "placeholder": "Your email address"
+        },
+        "phone": {
+            "label": "Phone",
+            "placeholder": "Your phone number"
+        },
+        "message": {
+            "label": "Message *",
+            "placeholder": "What would you like to tell me ?"
+        },
+        "submit": "Send"
+    }
+}

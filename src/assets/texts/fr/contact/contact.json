@@ -1,0 +1,26 @@
+{
+    "title": "Comment me joindre ?",
+    "socials": {
+        "title": "Mes réseaux"
+    },
+    "form": {
+        "title": "Contactez moi",
+        "name": {
+            "label": "Nom *",
+            "placeholder": "Comment dois-je vous appeler ?"
+        },
+        "email": {
+            "label": "Email *",
+            "placeholder": "Votre adresse email"
+        },
+        "phone": {
+            "label": "Téléphone",
+            "placeholder": "Votre numéro de téléphone"
+        },
+        "message": {
+            "label": "Message *",
+            "placeholder": "Que souhaitez-vous me dire ?"
+        },
+        "submit": "Envoyer"
+    }
+}

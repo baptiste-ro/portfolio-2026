@@ -1,33 +1,41 @@
-import { useEffect, useState } from 'react';
 import ContactForm from './contact-form/ContactForm';
 import Socials from './socials/Socials';
-import {
-	contactTitle,
-	type ContactSocialsType,
-} from '../../../types/languages/contact';
-import { useParams } from 'react-router';
+import { type ContactType } from '../../../types/languages/contact';
 
-export default function Contact() {
-	const [title, setTitle] = useState<ContactSocialsType>(contactTitle.en);
+interface ContactProps {
+	contact: ContactType;
+	useStates: any;
+	useRefs: any;
+	handlePhoneCodeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	handlePhoneChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	handleSubmit: (e: React.SubmitEvent<HTMLFormElement>) => void;
+}
 
-	const { lang } = useParams() as { lang: string };
-
-	useEffect(() => {
-		setTitle(
-			contactTitle[lang as keyof typeof contactTitle] || contactTitle.en
-		);
-	}, [lang]);
-
+export default function Contact({
+	contact,
+	useStates,
+	useRefs,
+	handlePhoneCodeChange,
+	handlePhoneChange,
+	handleSubmit,
+}: ContactProps) {
 	return (
 		<section className="pb-sm px-sm w-full">
 			<div className="title">
 				<p className="leading-relaxed white-text pb-sm skill-title">
-					{title.title}
+					{contact.title}
 				</p>
 			</div>
 			<div className="flex flex-row gap-smx row-gap-md">
-				<Socials />
-				<ContactForm />
+				<Socials title={contact.socials.title} />
+				<ContactForm
+					formValues={contact.form}
+					useStates={useStates}
+					useRefs={useRefs}
+					handlePhoneCodeChange={handlePhoneCodeChange}
+					handlePhoneChange={handlePhoneChange}
+					handleSubmit={handleSubmit}
+				/>
 			</div>
 		</section>
 	);

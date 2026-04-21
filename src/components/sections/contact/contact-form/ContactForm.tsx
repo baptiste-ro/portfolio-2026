@@ -1,80 +1,22 @@
-import { useEffect, useRef, useState } from 'react';
-import {
-	contactForm,
-	type ContactFormType,
-} from '../../../../types/languages/contact';
-import { useParams } from 'react-router';
+import { type ContactFormType } from '../../../../types/languages/contact';
 
-export default function ConntactForm() {
-	const [phoneCode, setPhoneCode] = useState('+');
-	const [phone, setPhone] = useState('');
+interface Props {
+	formValues: ContactFormType;
+	useStates: any;
+	useRefs: any;
+	handlePhoneCodeChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	handlePhoneChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	handleSubmit: (e: React.SubmitEvent<HTMLFormElement>) => void;
+}
 
-	const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
-	const [message, setMessage] = useState('');
-
-	const phoneCodeRef = useRef<HTMLInputElement>(null);
-	const phoneRef = useRef<HTMLInputElement>(null);
-	const nameRef = useRef<HTMLInputElement>(null);
-	const emailRef = useRef<HTMLInputElement>(null);
-	const messageRef = useRef<HTMLTextAreaElement>(null);
-
-	const [formValues, setFormValues] = useState<ContactFormType>();
-
-	const { lang } = useParams() as { lang: string };
-
-	useEffect(() => {
-		setFormValues(
-			contactForm[lang as keyof typeof contactForm] || contactForm.en
-		);
-	}, [lang]);
-
-	function handlePhoneCodeChange(e: React.ChangeEvent<HTMLInputElement>) {
-		if (e.target.value.length <= 4 && /^\+[0-9]*$/.test(e.target.value)) {
-			setPhoneCode(e.target.value);
-		}
-		if (!e.target.value) {
-			setPhoneCode('+');
-		}
-	}
-
-	function handlePhoneChange(e: React.ChangeEvent<HTMLInputElement>) {
-		if (e.target.value.length <= 15 && /^[0-9]*$/.test(e.target.value)) {
-			setPhone(e.target.value);
-		}
-	}
-
-	const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
-		e.preventDefault();
-
-		const payload = {
-			name: nameRef.current?.value || '',
-			email: emailRef.current?.value || '',
-			phone: `${phoneCodeRef.current?.value} ${phoneRef.current?.value}` || '',
-			message: messageRef.current?.value || '',
-		};
-
-		try {
-			const res = await fetch('/api/contact', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(payload),
-			});
-
-			const data: { success?: boolean; error?: string } = await res.json();
-
-			if (data.success) {
-				setName('');
-				setEmail('');
-				setPhone('');
-				setMessage('');
-			} else {
-			}
-		} catch (err) {}
-	};
-
+export default function ConntactForm({
+	formValues,
+	useStates,
+	useRefs,
+	handlePhoneCodeChange,
+	handlePhoneChange,
+	handleSubmit,
+}: Props) {
 	return (
 		<form
 			onSubmit={handleSubmit}
@@ -92,12 +34,12 @@ export default function ConntactForm() {
 					</h3>
 					<input
 						id="name"
-						ref={nameRef}
+						ref={useRefs.nameRef}
 						required
 						autoComplete="name"
 						type="text"
-						value={name}
-						onChange={e => setName(e.target.value)}
+						value={useStates.name.value}
+						onChange={e => useStates.name.setValue(e.target.value)}
 						placeholder={formValues?.name.placeholder}
 						className="w-full contact-input white-text"
 					/>
@@ -112,20 +54,20 @@ export default function ConntactForm() {
 								id="phone"
 								autoComplete="tel"
 								type="text"
-								ref={phoneCodeRef}
+								ref={useRefs.phoneCodeRef}
 								className="shrink-0 w-15 contact-input radius-right-none white-text"
 								placeholder="Code"
-								value={phoneCode}
+								value={useStates.phoneCode.value}
 								onChange={handlePhoneCodeChange}
 							/>
 							<input
 								id="phone"
 								autoComplete="tel"
 								type="text"
-								ref={phoneRef}
+								ref={useRefs.phoneRef}
 								className="grow-1 contact-input radius-left-none white-text"
 								placeholder={formValues?.phone.placeholder}
-								value={phone}
+								value={useStates.phone.value}
 								onChange={handlePhoneChange}
 							/>
 						</div>
@@ -139,9 +81,9 @@ export default function ConntactForm() {
 							id="email"
 							autoComplete="email"
 							type="email"
-							ref={emailRef}
-							value={email}
-							onChange={e => setEmail(e.target.value)}
+							ref={useRefs.emailRef}
+							value={useStates.email.value}
+							onChange={e => useStates.email.setValue(e.target.value)}
 							className="w-full contact-input white-text"
 							placeholder={formValues?.email.placeholder}
 						/>
@@ -155,9 +97,9 @@ export default function ConntactForm() {
 						id="message"
 						required
 						autoComplete="off"
-						ref={messageRef}
-						value={message}
-						onChange={e => setMessage(e.target.value)}
+						ref={useRefs.messageRef}
+						value={useStates.message.value}
+						onChange={e => useStates.message.setValue(e.target.value)}
 						className="w-full contact-input white-text"
 						rows={4}
 						placeholder={formValues?.message.placeholder}
@@ -167,7 +109,7 @@ export default function ConntactForm() {
 					type="submit"
 					className="translate-icons w-full text-center white-text font-lg border-none cursor-pointer"
 				>
-					Submit
+					{formValues?.submit}
 				</button>
 			</div>
 		</form>

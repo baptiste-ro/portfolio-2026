@@ -1,8 +1,5 @@
-import en_title from '../../assets/texts/en/projects/title.json';
-import fr_title from '../../assets/texts/fr/projects/title.json';
-
-import en_viewProject from '../../assets/texts/en/projects/viewProject.json';
-import fr_viewProject from '../../assets/texts/fr/projects/viewProject.json';
+import en_title from '../../assets/texts/en/projects/projects.json';
+import fr_title from '../../assets/texts/fr/projects/projects.json';
 
 export const projects = {
 	en: en_title,
@@ -11,13 +8,12 @@ export const projects = {
 
 export type ProjectsType = {
 	title: string;
-};
-
-export const viewProject = {
-	en: en_viewProject,
-	fr: fr_viewProject,
-};
-
-export type ViewProjectType = {
-	text: string;
+	viewProject: string;
+	projects: {
+		title: string;
+		description: string;
+		link: string;
+		image: string;
+		github: string;
+	}[];
 };

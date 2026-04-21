@@ -1,40 +1,30 @@
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router';
-import {
-	headerSections,
-	type HeaderSectionsType,
-} from '../../../types/languages/header';
+import { Link } from 'react-router';
 import TranslateButton from '../../translate-button/TranslateButton';
+import type { HeaderSectionsType } from '../../../types/languages/header';
+import type { TranslateLanguagesType } from '../../../types/languages/translate';
 
-export default function Header() {
-	const scrollToSection = (
+interface Props {
+	sections: HeaderSectionsType;
+	translateLanguages: TranslateLanguagesType;
+	translateButton: React.RefObject<HTMLDivElement | null>;
+	scrollToSection: (
 		e: React.MouseEvent<HTMLAnchorElement>,
 		sectionId: string
-	) => {
-		e.preventDefault();
-		const element = document.getElementById(sectionId);
-		if (element) {
-			element.scrollIntoView({ behavior: 'smooth' });
-		}
-	};
+	) => void;
+	handleHomeClick: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+	handleLanguageChange: (languageCode: string) => void;
+	translateButtonVisibilityToggle: () => void;
+}
 
-	const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-		e.preventDefault();
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	};
-
-	const [sections, setSections] = useState<HeaderSectionsType>(
-		headerSections.en
-	);
-
-	const { lang } = useParams() as { lang: string };
-
-	useEffect(() => {
-		setSections(
-			headerSections[lang as keyof typeof headerSections] || headerSections.en
-		);
-	}, [lang]);
-
+export default function Header({
+	sections,
+	translateLanguages,
+	translateButton,
+	scrollToSection,
+	handleHomeClick,
+	handleLanguageChange,
+	translateButtonVisibilityToggle,
+}: Props) {
 	return (
 		<header
 			className="dynamic-header fixed z-10000 top-0 left-0 z-20 flex justify-center px-4 md:px-5 transition-transform duration-300"
@@ -78,7 +68,12 @@ export default function Header() {
 								{link.label}
 							</a>
 						))}
-						<TranslateButton />
+						<TranslateButton
+							translateButton={translateButton}
+							translateLanguages={translateLanguages}
+							handleLanguageChange={handleLanguageChange}
+							visibilityToggle={translateButtonVisibilityToggle}
+						/>
 					</div>
 				</nav>
 			</div>

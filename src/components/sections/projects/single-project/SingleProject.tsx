@@ -1,23 +1,19 @@
-import { Link, useParams } from 'react-router';
-import type { Project } from '../../../../types/types';
-import { useEffect, useState } from 'react';
-import { viewProject, type ViewProjectType } from '../../../../types/languages/projects';
+import { Link } from 'react-router';
+
+interface Props {
+	image: string;
+	title: string;
+	description: string;
+	link: string;
+}
 
 export default function SingleProject({
 	image,
 	title,
 	description,
 	link,
-}: Project) {
-
-	const [viewLink, setViewLink] = useState<ViewProjectType>(viewProject.en);
-
-	const { lang } = useParams() as { lang: string };
-
-	useEffect(() => {
-		setViewLink(viewProject[lang as keyof typeof viewProject] || viewProject.en);
-	}, [lang]);
-
+	viewProject,
+}: Props & { viewProject: string }) {
 	return (
 		<div
 			className="w-32 bg-black-semi rounded-lg flex flex-col"
@@ -47,7 +43,7 @@ export default function SingleProject({
 					target="_blank"
 					className="faint-gray-border font-1/75 p-1r gap-xsm flex justify-center rounded-md"
 				>
-					{viewLink.text}
+					{viewProject}
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="14"

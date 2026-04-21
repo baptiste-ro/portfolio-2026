@@ -1,0 +1,41 @@
+{
+    "title": "Voici quelques-uns de mes projets récents",
+    "viewProject": "Voir le projet",
+    "projects": [
+        {
+            "title": "C'Cheky (front)",
+            "description": "Un site web réactif créé pour mettre en contact les entreprises locales avec les clients à Mayotte, une île où les entreprises locales ne peuvent être partagées que par bouche à oreille. Construit avec React et TypeScript dans un délai de 5 jours.",
+            "link": "https://ccheky.fr/",
+            "image": "https://res.cloudinary.com/dectmyhph/image/upload/v1776611694/ccheky.png_fbyt9m.png",
+            "github": "https://github.com/yourusername/ccheky-frontend"
+        },
+        {
+            "title": "ReactTube",
+            "description": "Un clone de YouTube construit avec React et TypeScript. Récupère les données d'une API backend. Construit en quelques heures avec une base solide. Partie des leçons React. L'API et la base ont été fournies par notre professeur.",
+            "link": "https://gitlab.univ-lille.fr/react/2025-2026/groupe-O/ROYER-Baptiste/tp6",
+            "image": "https://res.cloudinary.com/dectmyhph/image/upload/v1776612886/Screenshot_2026-04-19_113418_hdmotc.png",
+            "github": "https://gitlab.univ-lille.fr/react/2025-2026/groupe-O/ROYER-Baptiste/tp6"
+        },
+        {
+            "title": "React & Morty",
+            "description": "Une application React qui récupère les données d'une API locale Rick and Morty et affiche une sorte de wiki de personnages. Construit avec React et TypeScript. C'était un test pour notre cours React. L'API et la base ont été fournies par notre professeur.",
+            "link": "https://gitlab.univ-lille.fr/react/2025-2026/groupe-O/ROYER-Baptiste/ctp-react-2025-2026",
+            "image": "https://res.cloudinary.com/dectmyhph/image/upload/v1776613977/React___Morty_urfrzf.png",
+            "github": "https://gitlab.univ-lille.fr/react/2025-2026/groupe-O/ROYER-Baptiste/ctp-react-2025-2026"
+        },
+        {
+            "title": "Risc-V",
+            "description": "Un projet d'émulateur Risc-V. Construit en C. C'était un projet pour notre cours d'architecture informatique. Le projet consistait à simuler un processeur Risc-V avec un jeu d'instructions simple.",
+            "link": "https://gitlab.univ-lille.fr/tom.lelievre.etu/risc-v",
+            "image": "no image yet",
+            "github": "https://gitlab.univ-lille.fr/tom.lelievre.etu/risc-v"
+        },
+        {
+            "title": "Appointment Application",
+            "description": "Une application web générique faite pour permettre la gestion de rendez-vous. Son but est d'être facilement personnalisable pour différents cas d'utilisation. Construit avec JavaScript, JSP, HTML et CSS pour le frontend. Le backend a été construit avec Java et Spring Boot.",
+            "link": "https://github.com/baptiste-ro/SAE_Mathieu",
+            "image": "https://res.cloudinary.com/dectmyhph/image/upload/v1776615464/image_euejrv.png",
+            "github": "https://github.com/baptiste-ro/SAE_Mathieu"
+        }
+    ]
+}

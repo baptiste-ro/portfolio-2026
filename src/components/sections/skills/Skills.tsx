@@ -1,17 +1,7 @@
-import { useEffect, useState } from 'react';
 import SkillListElement from './skill/SkillListElement';
-import { skills, type SkillsType } from '../../../types/languages/skills';
-import { useParams } from 'react-router';
+import { type SkillsType } from '../../../types/languages/skills';
 
-export default function Skills() {
-	const [skillList, setSkillList] = useState<SkillsType>(skills.en);
-
-	const { lang } = useParams();
-
-	useEffect(() => {
-		setSkillList(skills[lang as keyof typeof skills] || skills.en);
-	}, [lang]);
-
+export default function Skills({ skillList }: { skillList: SkillsType }) {
 	return (
 		<section className="pb-sm px-sm w-full">
 			<div className="title">

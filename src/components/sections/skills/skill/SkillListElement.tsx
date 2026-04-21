@@ -12,7 +12,7 @@ export default function SkillListElement({
 			{categories.map(category => {
 				const li = category.skills.sort((a, b) => a.length - b.length);
 				return (
-					<div className="skill-component">
+					<div className="skill-component" key={category.title}>
 						<Icon
 							title={category.title}
 							color={category.color}
@@ -34,7 +34,6 @@ export default function SkillListElement({
 		</>
 	);
 }
-
 
 // display: flex;
 //     flex-direction: row;

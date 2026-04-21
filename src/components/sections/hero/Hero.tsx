@@ -1,17 +1,12 @@
-import { useEffect, useState } from 'react';
 import { bubbleBackground } from '../../../assets/ClassNames';
 import BubbleBackground from '../../bubbles/background/BubbleBackground';
-import { heroTitle, type HeroTitleType } from '../../../types/languages/hero';
-import { useParams } from 'react-router';
+import { type HeroTitleType } from '../../../types/languages/hero';
 
-export default function Hero() {
-	const [title, setTitle] = useState<HeroTitleType>(heroTitle.en);
+interface Props {
+	heroTitle: HeroTitleType;
+}
 
-	const { lang } = useParams() as { lang: string };
-
-	useEffect(() => {
-		setTitle(heroTitle[lang as keyof typeof heroTitle] || heroTitle.en);
-	}, [lang]);
+export default function Hero({ heroTitle }: Props) {
 	return (
 		<div>
 			<div className="hero pb-sm" id="hero">
@@ -42,7 +37,7 @@ export default function Hero() {
 						</h1>
 					</div>
 					<div className="border-2 w-full border-default-theme br-2"></div>
-					<div className="heading__line-1">{title.subtitle}</div>
+					<div className="heading__line-1">{heroTitle.subtitle}</div>
 				</div>
 			</div>
 			<BubbleBackground bgType={bubbleBackground} nb={400} />
