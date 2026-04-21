@@ -1,7 +1,9 @@
 {
     "home": "Accueil",
-    "about": "À propos",
-    "skills": "Compétences",
-    "projects": "Projets",
-    "contact": "Contact"
+    "links": [
+        {"label": "À propos", "id": "about"},
+        {"label": "Compétences", "id": "skills"},
+        {"label": "Projets", "id": "projects"},
+        {"label": "Contact", "id": "contact"}
+    ]
 }

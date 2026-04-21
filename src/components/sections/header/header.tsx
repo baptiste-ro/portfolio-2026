@@ -68,34 +68,16 @@ export default function Header() {
 						>
 							{sections.home}
 						</a>
-						<a
-							href="#about"
-							onClick={e => scrollToSection(e, 'about')}
-							className="nav-link home-link"
-						>
-							{sections.about}
-						</a>
-						<a
-							href="#skills"
-							onClick={e => scrollToSection(e, 'skills')}
-							className="nav-link home-link"
-						>
-							{sections.skills}
-						</a>
-						<a
-							href="#projects"
-							onClick={e => scrollToSection(e, 'projects')}
-							className="nav-link home-link"
-						>
-							{sections.projects}
-						</a>
-						<a
-							href="#contact"
-							onClick={e => scrollToSection(e, 'contact')}
-							className="nav-link home-link"
-						>
-							{sections.contact}
-						</a>
+						{sections.links.map((link, index) => (
+							<a
+								key={index}
+								href={`#${link.id}`}
+								onClick={e => scrollToSection(e, link.id)}
+								className="nav-link home-link"
+							>
+								{link.label}
+							</a>
+						))}
 						<TranslateButton />
 					</div>
 				</nav>

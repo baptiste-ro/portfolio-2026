@@ -8,8 +8,8 @@ export const headerSections = {
 
 export type HeaderSectionsType = {
 	home: string;
-	about: string;
-	skills: string;
-	projects: string;
-	contact: string;
+	links: {
+		label: string;
+		id: string;
+	}[];
 };
