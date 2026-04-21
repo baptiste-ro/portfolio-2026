@@ -31,7 +31,7 @@
             "github": "https://gitlab.univ-lille.fr/tom.lelievre.etu/risc-v"
         },
         {
-            "title": "Appointment Application",
+            "title": "Application de Rendez-Vous",
             "description": "Une application web générique faite pour permettre la gestion de rendez-vous. Son but est d'être facilement personnalisable pour différents cas d'utilisation. Construit avec JavaScript, JSP, HTML et CSS pour le frontend. Le backend a été construit avec Java et Spring Boot.",
             "link": "https://github.com/baptiste-ro/SAE_Mathieu",
             "image": "https://res.cloudinary.com/dectmyhph/image/upload/v1776615464/image_euejrv.png",
